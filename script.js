@@ -47,6 +47,7 @@ addAjax = function () {
 	};
 	
 formSubmit = function (evt) {
+	console.log('formSubmit');
 	 evt.preventDefault();
 		// Set up the AJAX request
 		formData = new FormData(form);
