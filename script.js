@@ -16,7 +16,6 @@ modal = function(on) {
 	
 }
 onLoad = function() {
-	navigator.geolocation.getCurrentPosition(console.log);
 	checkName();
 	document.querySelector("#userID").addEventListener('click',getNewUser);
 	form = document.forms[0];
@@ -24,8 +23,17 @@ onLoad = function() {
 	commentBox = form.querySelector('textarea');
 	Array.prototype.forEach.call(inputs, function(el, i){
 		el.disabled = true;
-		el.addEventListener('change', formSubmit);
-	});
+		el.addEventListener('change', function(evt) {
+		 evt.preventDefault();
+		// Set up the AJAX request
+		formData = new FormData(form);
+		formData.append("row", row);
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(onPosition);
+			} else {
+			onPosition({coords:{latitude:0,longitude:0}});
+			}
+		});
 	inputs[0].disabled = false;
 	commentBox.disabled = true;
 	addAjax();
