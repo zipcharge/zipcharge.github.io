@@ -23,7 +23,7 @@ onLoad = function() {
 	commentBox = form.querySelector('textarea');
 	Array.prototype.forEach.call(inputs, function(el, i){
 		el.disabled = true;
-		el.addEventListener('input',formSubmit);
+		el.addEventListener('change',formSubmit);
 	});
 	inputs[0].disabled = false;
 	commentBox.disabled = true;
