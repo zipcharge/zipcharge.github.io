@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>zipcharge</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="script.js?v=13"></script>
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="webapp.css?v=14">
+</head>
+<body>
+ <a href="." class="otherCar">other car</a>
+ <h1>zipcharge</h1>
+ <form action="https://script.google.com/macros/s/AKfycbwkOQwp_eSNKGqkcrg6J_AOh1UMGI7oXjoIn7Pjzu-43NIXLN_H/exec" disabled>
+  <label for="license">license</label>
+  <input type="text" name="license" id="license" value="" pattern="[a-zA-Z]{2}\d{2}[a-zA-Z]{3}$">
+  <label for ="start_mileage">start mileage</label>
+  <input type="number" name="start_mileage" id="start_mileage" value="" min="0" max="50000">
+  <label for ="charge_mileage">charge mileage</label>
+  <input type="number" name="charge_mileage" id="charge_mileage" value="" min="0" max="50000">
+  <label for="charge_kwh">charge kWh</label>
+  <input type="number" name="charge_kwh" id="charge_kwh" value="" min="0" max="150">
+  <label for="end_mileage">end mileage</label>
+  <input type="number" name="end_mileage" id="end_mileage" value="" min="0" max="50000">
+  <label for="comment">comment</label>
+  <textarea name="comment" rows=3></textarea>
+  <button type="submit">update</button>
+ </form>
+ <div id="userID"></div>
+ <div id="modal">
+	<div id="modal-content">
+	working...
+	</div>
+ </div>
+</body>
+</html>
