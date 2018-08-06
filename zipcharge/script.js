@@ -32,21 +32,11 @@ onLoad = function() {
 
 addAjax = function () {
 	// Listen for the form being submitted
-	form.addEventListener('submit', function(evt) {
-		 evt.preventDefault();
-		// Set up the AJAX request
-		formData = new FormData(form);
-		formData.append("row", row);
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(onPosition);
-			} else {
-			onPosition({coords:{latitude:0,longitude:0}});
-			}
-		});
+	form.addEventListener('submit', formSubmit);
 	};
 	
 formSubmit = function (evt) {
-	console.log('formSubmit');
+	
 	 evt.preventDefault();
 		// Set up the AJAX request
 		formData = new FormData(form);
