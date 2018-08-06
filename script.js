@@ -58,7 +58,7 @@ onPosition = function(pos) {
 		object[key] = value;
 		});
 	request = new XMLHttpRequest();
-	request.open('POST', googleURL, true);
+	request.open('POST', 'https://script.google.com/macros/s/AKfycbwkOQwp_eSNKGqkcrg6J_AOh1UMGI7oXjoIn7Pjzu-43NIXLN_H/exec', true);
 	request.setRequestHeader('accept', 'application/json');
 	request.onreadystatechange = function () {
 	    // <4 =  waiting on response from server
