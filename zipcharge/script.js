@@ -23,17 +23,8 @@ onLoad = function() {
 	commentBox = form.querySelector('textarea');
 	Array.prototype.forEach.call(inputs, function(el, i){
 		el.disabled = true;
-		el.addEventListener('change', function(evt) {
-		 evt.preventDefault();
-		// Set up the AJAX request
-		formData = new FormData(form);
-		formData.append("row", row);
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(onPosition);
-			} else {
-			onPosition({coords:{latitude:0,longitude:0}});
-			}
-		});
+		el.addEventListener('change', formSubmit);
+	});
 	inputs[0].disabled = false;
 	commentBox.disabled = true;
 	addAjax();
