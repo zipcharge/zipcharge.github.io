@@ -36,19 +36,16 @@ addAjax = function () {
 	};
 	
 formSubmit = function (evt) {
-	
-	 evt.preventDefault();
-		// Set up the AJAX request
-		formData = new FormData(form);
-		formData.append("row", row);
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(onPosition);
-			} else {
-			onPosition({coords:{latitude:0,longitude:0}});
-			}
-	
-	
-};
+	evt.preventDefault();
+	// Set up the AJAX request
+	formData = new FormData(form);
+	formData.append("row", row);
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(onPosition);
+		} else {
+		onPosition({coords:{latitude:0,longitude:0}});
+		}
+	};
 
 onPosition = function(pos) {
 	form.disabled = true;
