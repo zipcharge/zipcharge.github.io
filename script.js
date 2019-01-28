@@ -1,5 +1,6 @@
-//var googleURL = 'https://script.google.com/macros/s/AKfycbyin-id0cutb_E6RkIHrF3b5i-1V-8Uzhmud-0oL0BFT3yxBpvf/exec';
-var googleURL = 'https://docs.google.com/spreadsheets/d/1zGe0wliiX5OmudU9NntkLzfYJz-mVePNGCQqOsQT1dk/exec';
+//OK var googleURL = 'https://script.google.com/macros/s/AKfycbyin-id0cutb_E6RkIHrF3b5i-1V-8Uzhmud-0oL0BFT3yxBpvf/exec';
+var googleURL = 'https://script.google.com/macros/s/AKfycbyTVe9nzu4RuOjgNAfswlt8wSDRIV7sZibHu3LusWwZ9972XOwY/exec';
+
 var form;
 var inputs;
 var value_labels = ["start_mileage","charge_mileage","charge_kwh","end_mileage"];
